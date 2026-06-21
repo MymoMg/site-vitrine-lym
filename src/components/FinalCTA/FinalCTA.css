@@ -1,0 +1,51 @@
+.final-cta__panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 36px;
+  border: 1px solid var(--c-border-strong);
+  padding: clamp(56px, 9vw, 110px) clamp(24px, 6vw, 60px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(165deg, rgba(135, 48, 249, 0.16), rgba(214, 255, 96, 0.05) 60%, transparent);
+}
+
+.final-cta__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.final-cta__glow--violet {
+  width: 420px;
+  height: 420px;
+  top: -160px;
+  left: -100px;
+  background: var(--c-violet);
+  opacity: 0.45;
+}
+
+.final-cta__glow--green {
+  width: 340px;
+  height: 340px;
+  bottom: -140px;
+  right: -80px;
+  background: var(--c-green);
+  opacity: 0.22;
+}
+
+.final-cta__title {
+  position: relative;
+  margin-top: 18px;
+  font-size: clamp(30px, 5vw, 50px);
+  max-width: 680px;
+}
+
+.final-cta__btn {
+  position: relative;
+  margin-top: 38px;
+  padding: 18px 36px;
+  font-size: 16px;
+}

@@ -1,0 +1,125 @@
+.progression {
+  position: relative;
+  overflow: hidden;
+}
+
+.progression__panel {
+  margin-top: 56px;
+  padding: 34px 30px 24px;
+}
+
+.progression__panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.progression__panel-title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.progression__panel-sub {
+  font-size: 13px;
+  color: var(--c-white-50);
+  margin-top: 4px;
+}
+
+.progression__panel-tag {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--c-green);
+  background: var(--c-green-soft);
+  border: 1px solid rgba(214, 255, 96, 0.35);
+  padding: 7px 14px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.progression__chart {
+  width: 100%;
+  height: clamp(140px, 22vw, 200px);
+  overflow: visible;
+}
+
+.progression__grid-line {
+  stroke: rgba(255, 255, 255, 0.06);
+  stroke-width: 1;
+}
+
+.progression__chart-line {
+  fill: none;
+  stroke: var(--c-green);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+}
+
+.progression__panel.is-visible .progression__chart-line {
+  animation: progDraw 2s 0.2s var(--ease-out-soft) forwards;
+}
+
+@keyframes progDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+.progression__chart-dot {
+  fill: var(--c-bg);
+  stroke: var(--c-green);
+  stroke-width: 2.4;
+  opacity: 0;
+}
+
+.progression__panel.is-visible .progression__chart-dot {
+  animation: dotPop 0.4s 1.9s var(--ease-out-soft) forwards;
+}
+
+@keyframes dotPop {
+  to { opacity: 1; }
+}
+
+.progression__chart-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--c-white-30);
+}
+
+.progression__stats {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  padding: 28px 24px;
+  text-align: left;
+}
+
+.stat-card__value {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4vw, 46px);
+  font-weight: 700;
+  color: var(--c-green);
+}
+
+.stat-card__label {
+  margin-top: 8px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--c-white-50);
+}
+
+@media (max-width: 760px) {
+  .progression__stats {
+    grid-template-columns: 1fr;
+  }
+}

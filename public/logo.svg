@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 34" height="34">
+  <!-- Placeholder : remplacez ce fichier par le vrai logo LYM (public/logo.svg ou changez l'extension dans Navbar.tsx) -->
+  <text x="0" y="25" font-family="'Clash Display','Helvetica Neue',sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">LYM</text>
+  <circle cx="108" cy="9" r="4" fill="#D6FF60"/>
+</svg>
